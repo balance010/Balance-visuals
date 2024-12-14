@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance visuals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif,;
+            background-color: #1d1d1d;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #000;
+            padding: 30px 10px;
+            text-align: center;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            font-size: 3.0rem;
+            color: #fcd600;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header h1:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #ycd600;
+            font-size: 1.0rem;
+            margin: 0 15px;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 1.0rem;
+            z-index: 20;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+            
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+        }
+
+        .skills {
+            padding: 10px 10px;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .skills h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .skills .skill-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skills .skill {
+            background-color: #fcd600;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 150px;
+            transition: fade in 0.4s ease, background-color 0.3s ease;
+        }
+
+        .skills .skill:hover {
+            transform: translateY(-10px);
+            background-color: #ffffff;
+        }
+
+        .contact {
+            padding: 20px 10px;
+            background-color: #fcd600;
+            text-align: center;
+            color: #000;
+        }
+
+        .contact h3 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .contact .btn {
+            background-color: #222;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact .btn:hover {
+            background-color: #fcd600;
+            color: #222;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fcd600;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Balance visuals</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Editor | Cameraman | Tech Enthusiast</h2> 
+    </section>
+
+    <section id="skills" class="skills">
+        <h3>My Skills</h3>
+        <div class="skill-list">
+            <div class="skill">Video Editing</div>
+            <div class="skill">Camera Work</div>
+            <div class="skill">Photography</div>
+            <div class="skill">Tech Support</div>
+            <div class="skill">Post Production</div>
+            <div class="skill">Content Creation</div>
+            <div class="skill">Html</div>
+            <div class="skill">CSS </div>
+            <div class="skill">Graphic designs</div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h3>Let's Work Together!</h3>
+        <p>If you're looking for a skilled editor, cameraman, or tech professional, get in touch with me.</p>
+        <button class="btn">Contact Me</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Balance. All rights reserved.</p>
+        <p>
+            <a href="mail to:balancenations01@gmail.com">Email</a> | 
+            <a href="https://www.facebook.com/profile.php?id=100083202293260&mibextid=ZbWKwL"u>Facebook</a> | 
+            <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+            <a href="https://wa.me/2347069218521">Whatsapp</a>
+            <a href="tel:+2347069218521" class="phond btn">
+        </p>
+    </footer>
+
+</body>
+</html>
